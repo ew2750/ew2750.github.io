@@ -213,15 +213,11 @@ figcaption {
 .projects-intro {
   color: var(--muted);
   font-size: 15px;
-  margin-bottom: 6px;
+  margin-bottom: 22px;
 }
 
 .project-category {
-  border-top: 1px solid var(--line);
-}
-
-.project-category:first-of-type {
-  border-top: 0;
+  margin-bottom: 16px;
 }
 
 .category-header {
@@ -230,36 +226,39 @@ figcaption {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 24px 2px;
-  background: none;
-  border: 0;
+  padding: 18px 22px;
+  background: #f8fbfd;
+  border: 1px solid var(--line);
+  border-radius: 12px;
   cursor: pointer;
   text-align: left;
   font: inherit;
   color: inherit;
+  transition: background 0.18s ease, border-color 0.18s ease;
 }
 
-.category-header:hover .category-name {
-  color: var(--link);
+.category-header:hover,
+.project-category.open .category-header {
+  background: var(--soft-blue);
+  border-color: #bfe0ee;
 }
 
 .category-title {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
   min-width: 0;
 }
 
 .category-name {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 700;
-  color: var(--heading);
-  line-height: 1.2;
-  transition: color 0.15s ease;
+  color: var(--heading-dark);
+  line-height: 1.25;
 }
 
 .category-subtitle {
-  font-size: 14px;
+  font-size: 13.5px;
   color: var(--muted);
   line-height: 1.4;
 }
@@ -277,17 +276,40 @@ figcaption {
   white-space: nowrap;
 }
 
-.category-chevron {
-  width: 10px;
-  height: 10px;
-  border-right: 2px solid var(--heading);
-  border-bottom: 2px solid var(--heading);
-  transform: rotate(45deg);
-  transition: transform 0.22s ease;
+.category-toggle {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
-.project-category.open .category-chevron {
-  transform: rotate(-135deg);
+.category-toggle::before,
+.category-toggle::after {
+  content: "";
+  position: absolute;
+  background: var(--heading);
+  border-radius: 1px;
+  transition: transform 0.2s ease;
+}
+
+.category-toggle::before {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  margin-top: -1px;
+}
+
+.category-toggle::after {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  margin-left: -1px;
+}
+
+.project-category.open .category-toggle::after {
+  transform: scaleY(0);
 }
 
 .category-body {
@@ -309,8 +331,8 @@ figcaption {
 }
 
 .category-body .project-entry {
-  margin-left: 4px;
-  padding-left: 22px;
+  margin-left: 12px;
+  padding-left: 20px;
   border-left: 2px solid var(--line);
 }
 
