@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Projects - Douglas Zhou</title>
+    <title>Projects - Dao Zhou</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="favicon.png">
   </head>
   <body>
     <header class="site-header">
-      <a class="site-title" href="index.html">Douglas Zhou</a>
+      <a class="site-title" href="index.html">Dao Zhou</a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="research.html">Research</a>
@@ -22,92 +22,147 @@
 
     <main class="page text-page projects-page">
       <h1>Projects</h1>
+      <p class="projects-intro">My project experience, grouped by theme. Click a category to expand it.</p>
 
-      <section class="project-entry">
-        <h2>Understanding Heterogeneity in Neural Activity of Sentence Processing Using Word Embeddings</h2>
-        <p class="project-meta">10/2024 - Present | Leader and core collaborator | Advisor: Prof. Xiang-Zhen Kong | Cognomics Lab, Zhejiang University</p>
-        <p>This project asks how the brain integrates multi-dimensional linguistic and cognitive features during sentence comprehension. It grows out of my broader interest in treating sentence understanding not as a single process, but as a heterogeneous set of computations distributed across brain systems.</p>
-        <p>I led an fMRI project using 1,000 semantically diverse Mandarin sentences, task-fMRI, psycholinguistic ratings, GLMsingle beta estimation, ROI-wise ridge regression encoding models, Sentence-Transformer embeddings, and representational similarity analysis.</p>
-        <p>The project helped me connect computational language representations with neural heterogeneity across the language network, PFC, and visual pathways.</p>
+      <section class="project-category open" id="cat-psychology">
+        <button class="category-header" type="button" aria-expanded="true" aria-controls="body-psychology">
+          <span class="category-title">
+            <span class="category-name">The Psychology of Language</span>
+            <span class="category-subtitle">How the mind and brain process and produce language.</span>
+          </span>
+          <span class="category-meta">
+            <span class="category-count">4 projects</span>
+            <span class="category-chevron" aria-hidden="true"></span>
+          </span>
+        </button>
+        <div class="category-body" id="body-psychology">
+          <div class="category-body-inner">
+
+            <section class="project-entry">
+              <h2>An MEG Investigation of Perceptual and Semantic Constraints on Language Processing</h2>
+              <p class="project-meta">07/2026 - Present | Leader and core collaborator | Advisor: Prof. Liina Pylkkänen | Neurolinguistics Lab, New York University</p>
+              <p>This project asks whether limits in language comprehension come from perceptual constraints on visual input length or semantic constraints on information density.</p>
+              <p>At NYU's NeLLab, I am designing an MEG experiment using rapid parallel visual presentation. The design compares coherent stories, shuffled chunk lists, and shuffled word lists, aiming to separate discourse coherence, syntactic structure, physical length, and information density.</p>
+              <p>This work is helping me translate theoretical questions about comprehension capacity into temporally precise neurolinguistic designs.</p>
+            </section>
+
+            <section class="project-entry">
+              <h2>Understanding Heterogeneity in Neural Activity of Sentence Processing Using Word Embeddings</h2>
+              <p class="project-meta">10/2024 - Present | Leader and core collaborator | Advisor: Prof. Xiang-Zhen Kong | Cognomics Lab, Zhejiang University</p>
+              <p>This project asks how the brain integrates multi-dimensional linguistic and cognitive features during sentence comprehension. It grows out of my broader interest in treating sentence understanding not as a single process, but as a heterogeneous set of computations distributed across brain systems.</p>
+              <p>I led an fMRI project using 1,000 semantically diverse Mandarin sentences, task-fMRI, psycholinguistic ratings, GLMsingle beta estimation, ROI-wise ridge regression encoding models, Sentence-Transformer embeddings, and representational similarity analysis.</p>
+              <p>The project helped me connect computational language representations with neural heterogeneity across the language network, PFC, and visual pathways.</p>
+            </section>
+
+            <section class="project-entry">
+              <h2>The Mental Number Line is Logarithmic Rather than Linear in the Human Intraparietal Sulcus</h2>
+              <p class="project-meta">04/2026 - 07/2026 | Independent research | Self-initiated and self-directed</p>
+              <p>This independent project examines whether the human intraparietal sulcus represents numerical magnitude on a linear or logarithmically compressed scale.</p>
+              <p>I analyzed high-resolution fMRI data from the Individual Brain Charting dataset, constructed subject-specific IPS ROIs, generated neural RDMs using RSA, and used Procrustes alignment to evaluate cross-subject convergence.</p>
+              <p>The results supported a logarithmic number-line model and suggested stable cross-individual representational geometry. Methodologically, this project also deepened my experience with ROI-based RSA and representational model comparison.</p>
+              <p><a href="assets/projects/project3_number_representation.pdf">Manuscript PDF</a></p>
+            </section>
+
+            <section class="project-entry">
+              <h2>Social Context Modulates Speech Self-Monitoring in Asynchronous Voice Communication</h2>
+              <p class="project-meta">2026 | Psycholinguistics project</p>
+              <p>This psycholinguistics project asks whether social-contextual cues alone can modulate speech self-monitoring.</p>
+              <p>I used PsychoPy-based speech recording, Praat/TextGrid annotation, and repeated-measures analyses of onset latency, disfluencies, and repair proportions.</p>
+              <p>The key result was selective upregulation of repairs in the asynchronous condition, suggesting stronger post-articulatory monitoring under evaluative pressure. The project helped me connect social context with speech production mechanisms.</p>
+              <p><a href="assets/projects/project6_asynchronous_conversation.pdf">Final report PDF</a> | <a href="assets/projects/project6_talk_or_tape_slides.pptx">Slides PPTX</a></p>
+            </section>
+
+          </div>
+        </div>
       </section>
 
-      <section class="project-entry">
-        <h2>An MEG Investigation of Perceptual and Semantic Constraints on Language Processing</h2>
-        <p class="project-meta">07/2026 - Present | Leader and core collaborator | Advisor: Prof. Liina Pylkkänen | Neurolinguistics Lab, New York University</p>
-        <p>This project asks whether limits in language comprehension come from perceptual constraints on visual input length or semantic constraints on information density.</p>
-        <p>At NYU's NeLLab, I am designing an MEG experiment using rapid parallel visual presentation. The design compares coherent stories, shuffled chunk lists, and shuffled word lists, aiming to separate discourse coherence, syntactic structure, physical length, and information density.</p>
-        <p>This work is helping me translate theoretical questions about comprehension capacity into temporally precise neurolinguistic designs.</p>
+      <section class="project-category" id="cat-computational">
+        <button class="category-header" type="button" aria-expanded="false" aria-controls="body-computational">
+          <span class="category-title">
+            <span class="category-name">Computational Studies</span>
+            <span class="category-subtitle">Modeling language with corpora, cognitive models, and large language models.</span>
+          </span>
+          <span class="category-meta">
+            <span class="category-count">3 projects</span>
+            <span class="category-chevron" aria-hidden="true"></span>
+          </span>
+        </button>
+        <div class="category-body" id="body-computational">
+          <div class="category-body-inner">
+
+            <section class="project-entry">
+              <h2>Source Languages Systematically Shape the Lexico-Grammatical Profiles of Translated English</h2>
+              <p class="project-meta">04/2026 - 07/2026 | Independent research | Self-initiated and self-directed</p>
+              <p>This corpus study asks how translated English is shaped by the negotiation between source-language structures and target-language norms.</p>
+              <p>I extracted Biber lexico-grammatical features for 16 translated English varieties from OPUS-100, compared them with original English, and related feature-space distances to WALS typological distances.</p>
+              <p>The project led to the ideas of direct structural mapping and cognate camouflage as mechanisms of source-language influence. It also helped me think about language as a measurable, cross-linguistic system rather than only a formal object.</p>
+              <p><a href="assets/projects/project4_translation_negotiation.pdf">Final report PDF</a></p>
+            </section>
+
+            <section class="project-entry">
+              <h2>Chain-of-Thought Reasoning Strategies in Large Language Models</h2>
+              <p class="project-meta">2026 | Computational project</p>
+              <p>This project evaluates how CoT-related reasoning strategies affect LLM performance on competition math and multi-hop question answering.</p>
+              <p>I implemented and compared Direct prompting, Few-shot CoT, Self-Consistency, Step-Aware Verification, Multi-Agent Debate, and IRCoT.</p>
+              <p>The results clarified how strategy benefits depend on model strength and computational cost: explicit CoT was especially useful for weaker models, while retrieval-interleaved reasoning improved multi-hop QA performance.</p>
+              <p><a href="assets/projects/project5_cot_strategies.pdf">Report PDF</a></p>
+            </section>
+
+            <section class="project-entry">
+              <h2>Optimizing Decay and Rehearsal in a Computational Model of the Phonological Loop</h2>
+              <p class="project-meta">07/2025 - 08/2025 | Computational modeling project | Advisor: Dr. Christopher Kymn, UC Berkeley</p>
+              <p>This computational modeling project asks how a simplified phonological-loop model can better capture the word length effect.</p>
+              <p>I helped test exponential decay, position-dependent encoding strength, associative retrieval using GloVe-based similarity, and parameter search using RMSD.</p>
+              <p>Position-dependent encoding strength produced the clearest model improvement. The project gave me hands-on experience with cognitive model evaluation and the tradeoff between model flexibility and testability.</p>
+              <p><a href="assets/projects/project7_phonological_loop_writeup.docx">Writeup DOCX</a> | <a href="assets/projects/project7_phonological_loop_slides.pptx">Slides PPTX</a> | <a href="https://github.com/taochou-cogsci/CogSci-Final-Project-A-Computational-Model-of-the-Phonological-Loop">Code repository</a></p>
+            </section>
+
+          </div>
+        </div>
       </section>
 
-      <section class="project-entry">
-        <h2>The Mental Number Line is Logarithmic Rather than Linear in the Human Intraparietal Sulcus</h2>
-        <p class="project-meta">04/2026 - 07/2026 | Independent research | Self-initiated and self-directed</p>
-        <p>This independent project examines whether the human intraparietal sulcus represents numerical magnitude on a linear or logarithmically compressed scale.</p>
-        <p>I analyzed high-resolution fMRI data from the Individual Brain Charting dataset, constructed subject-specific IPS ROIs, generated neural RDMs using RSA, and used Procrustes alignment to evaluate cross-subject convergence.</p>
-        <p>The results supported a logarithmic number-line model and suggested stable cross-individual representational geometry. Methodologically, this project also deepened my experience with ROI-based RSA and representational model comparison.</p>
-        <p><a href="assets/projects/project3_number_representation.pdf">Manuscript PDF</a></p>
-      </section>
+      <section class="project-category" id="cat-others">
+        <button class="category-header" type="button" aria-expanded="false" aria-controls="body-others">
+          <span class="category-title">
+            <span class="category-name">Others</span>
+            <span class="category-subtitle">Developmental, psychometric, and perceptual projects.</span>
+          </span>
+          <span class="category-meta">
+            <span class="category-count">3 projects</span>
+            <span class="category-chevron" aria-hidden="true"></span>
+          </span>
+        </button>
+        <div class="category-body" id="body-others">
+          <div class="category-body-inner">
 
-      <section class="project-entry">
-        <h2>Source Languages Systematically Shape the Lexico-Grammatical Profiles of Translated English</h2>
-        <p class="project-meta">04/2026 - 07/2026 | Independent research | Self-initiated and self-directed</p>
-        <p>This corpus study asks how translated English is shaped by the negotiation between source-language structures and target-language norms.</p>
-        <p>I extracted Biber lexico-grammatical features for 16 translated English varieties from OPUS-100, compared them with original English, and related feature-space distances to WALS typological distances.</p>
-        <p>The project led to the ideas of direct structural mapping and cognate camouflage as mechanisms of source-language influence. It also helped me think about language as a measurable, cross-linguistic system rather than only a formal object.</p>
-        <p><a href="assets/projects/project4_translation_negotiation.pdf">Final report PDF</a></p>
-      </section>
+            <section class="project-entry">
+              <h2>Optimal Combination of Sample Size and Observation Duration for Behavioral Rate Estimation</h2>
+              <p class="project-meta">12/2025 - Present | Research Assistant | Advisor: Dr. Danyang Han, Prof. Karen Adolph | Play and Learning Lab, Zhejiang University</p>
+              <p>This in-progress project concerns how researchers can estimate rates of infant behavior under realistic constraints on observation duration and sample size.</p>
+              <p>As a Research Assistant at the Play and Learning Lab, I gained hands-on exposure to developmental behavioral research and the practical problem of estimating behavior reliably from limited observation.</p>
+              <p>This project broadened my methodological perspective beyond adult cognitive neuroscience and into developmental data collection.</p>
+            </section>
 
-      <section class="project-entry">
-        <h2>Chain-of-Thought Reasoning Strategies in Large Language Models</h2>
-        <p class="project-meta">2026 | Computational project</p>
-        <p>This project evaluates how CoT-related reasoning strategies affect LLM performance on competition math and multi-hop question answering.</p>
-        <p>I implemented and compared Direct prompting, Few-shot CoT, Self-Consistency, Step-Aware Verification, Multi-Agent Debate, and IRCoT.</p>
-        <p>The results clarified how strategy benefits depend on model strength and computational cost: explicit CoT was especially useful for weaker models, while retrieval-interleaved reasoning improved multi-hop QA performance.</p>
-        <p><a href="assets/projects/project5_cot_strategies.pdf">Report PDF</a></p>
-      </section>
+            <section class="project-entry">
+              <h2>Developing the Humanities Attitudes Scale</h2>
+              <p class="project-meta">2025 | Psychometrics project</p>
+              <p>This psychometrics project asks how attitudes toward the humanities can be measured systematically.</p>
+              <p>The workflow combined GPT-based item generation, manual screening and refinement, multi-stakeholder interviews, human data collection, exploratory factor analysis, confirmatory factor analysis, reliability analysis, and clustering.</p>
+              <p>The project produced a 22-item Humanities Attitudes Scale across five dimensions. It also let me explore how LLM-assisted item generation can be combined with conventional psychometric validation.</p>
+              <p><a href="assets/projects/project9_humanities_attitudes_scale.pptx">Slides PPTX</a> | <a href="https://github.com/taochou-cogsci/Humanities-Attitude-Scale">Code repository</a></p>
+            </section>
 
-      <section class="project-entry">
-        <h2>Social Context Modulates Speech Self-Monitoring in Asynchronous Voice Communication</h2>
-        <p class="project-meta">2026 | Psycholinguistics project</p>
-        <p>This psycholinguistics project asks whether social-contextual cues alone can modulate speech self-monitoring.</p>
-        <p>I used PsychoPy-based speech recording, Praat/TextGrid annotation, and repeated-measures analyses of onset latency, disfluencies, and repair proportions.</p>
-        <p>The key result was selective upregulation of repairs in the asynchronous condition, suggesting stronger post-articulatory monitoring under evaluative pressure. The project helped me connect social context with speech production mechanisms.</p>
-        <p><a href="assets/projects/project6_asynchronous_conversation.pdf">Final report PDF</a> | <a href="assets/projects/project6_talk_or_tape_slides.pptx">Slides PPTX</a></p>
-      </section>
+            <section class="project-entry">
+              <h2>Pitch-Class Structure Encodes Spatial Attentional Distance and Symmetrical Activation</h2>
+              <p class="project-meta">2026 | Experimental psychology project</p>
+              <p>This experimental psychology project asks how multi-level pitch structures modulate vertical spatial attention under the SMARC framework.</p>
+              <p>I worked on a behavioral and eye-tracking experiment examining pitch-location distance coding, symmetrical activation, and the role of pitch-discrimination thresholds.</p>
+              <p>The project proposed a dual-stage account combining primary linear mapping with secondary extremum monitoring. It also gave me more experience with behavioral experiment design and individual-difference analysis.</p>
+              <p><a href="assets/projects/project10_pitch_spatial_attention.pdf">Report PDF</a></p>
+            </section>
 
-      <section class="project-entry">
-        <h2>Optimizing Decay and Rehearsal in a Computational Model of the Phonological Loop</h2>
-        <p class="project-meta">07/2025 - 08/2025 | Computational modeling project | Advisor: Dr. Christopher Kymn, UC Berkeley</p>
-        <p>This computational modeling project asks how a simplified phonological-loop model can better capture the word length effect.</p>
-        <p>I helped test exponential decay, position-dependent encoding strength, associative retrieval using GloVe-based similarity, and parameter search using RMSD.</p>
-        <p>Position-dependent encoding strength produced the clearest model improvement. The project gave me hands-on experience with cognitive model evaluation and the tradeoff between model flexibility and testability.</p>
-        <p><a href="assets/projects/project7_phonological_loop_writeup.docx">Writeup DOCX</a> | <a href="assets/projects/project7_phonological_loop_slides.pptx">Slides PPTX</a> | <a href="https://github.com/taochou-cogsci/CogSci-Final-Project-A-Computational-Model-of-the-Phonological-Loop">Code repository</a></p>
-      </section>
-
-      <section class="project-entry">
-        <h2>Estimating the Rate of Infant Behavior</h2>
-        <p class="project-meta">2025 - Present | Research Assistant | PI: Prof. Danyang Han | Play and Learning Lab, Zhejiang University</p>
-        <p>This in-progress project concerns how researchers can estimate rates of infant behavior under realistic constraints on observation duration and sample size.</p>
-        <p>As a Research Assistant at the Play and Learning Lab, I gained hands-on exposure to developmental behavioral research and the practical problem of estimating behavior reliably from limited observation.</p>
-        <p>This project broadened my methodological perspective beyond adult cognitive neuroscience and into developmental data collection.</p>
-      </section>
-
-      <section class="project-entry">
-        <h2>Developing the Humanities Attitudes Scale</h2>
-        <p class="project-meta">2025 | Psychometrics project</p>
-        <p>This psychometrics project asks how attitudes toward the humanities can be measured systematically.</p>
-        <p>The workflow combined GPT-based item generation, manual screening and refinement, multi-stakeholder interviews, human data collection, exploratory factor analysis, confirmatory factor analysis, reliability analysis, and clustering.</p>
-        <p>The project produced a 22-item Humanities Attitudes Scale across five dimensions. It also let me explore how LLM-assisted item generation can be combined with conventional psychometric validation.</p>
-        <p><a href="assets/projects/project9_humanities_attitudes_scale.pptx">Slides PPTX</a> | <a href="https://github.com/taochou-cogsci/Humanities-Attitude-Scale">Code repository</a></p>
-      </section>
-
-      <section class="project-entry">
-        <h2>Pitch-Class Structure Encodes Spatial Attentional Distance and Symmetrical Activation</h2>
-        <p class="project-meta">2026 | Experimental psychology project</p>
-        <p>This experimental psychology project asks how multi-level pitch structures modulate vertical spatial attention under the SMARC framework.</p>
-        <p>I worked on a behavioral and eye-tracking experiment examining pitch-location distance coding, symmetrical activation, and the role of pitch-discrimination thresholds.</p>
-        <p>The project proposed a dual-stage account combining primary linear mapping with secondary extremum monitoring. It also gave me more experience with behavioral experiment design and individual-difference analysis.</p>
-        <p><a href="assets/projects/project10_pitch_spatial_attention.pdf">Report PDF</a></p>
+          </div>
+        </div>
       </section>
     </main>
   </body>
