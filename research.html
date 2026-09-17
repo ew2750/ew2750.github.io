@@ -3,41 +3,109 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Research interests of YOUR NAME.">
-    <title>Research | YOUR NAME</title>
+    <meta name="description" content="Erxiao Wang’s research agenda and selected projects on the neural implementation of language, naturalistic sentence processing, and language–speech interfaces.">
+    <title>Research | ErxiaoWang personal website</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
   </head>
   <body>
     <header class="site-header">
-      <a class="site-title" href="index.html">YOUR NAME</a>
+      <a class="site-title" href="index.html">ERXIAO WANG</a>
       <nav class="nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a class="active" aria-current="page" href="research.html">Research</a>
-        <a href="projects.html">Projects</a>
+        <a href="analysis.html">Analysis</a>
         <a href="presentations.html">Publications &amp; Talks</a>
         <a href="cv.html">CV</a>
         <a href="about.html">About</a>
+        <a href="misc.html">Misc</a>
       </nav>
     </header>
-    <main class="page text-page">
-      <p class="eyebrow">Research agenda</p>
+
+    <main class="page text-page research-page">
+      <p class="eyebrow">Research</p>
       <h1>Research</h1>
-      <p class="lead">TODO: Summarize the big problem your research addresses and why it matters.</p>
-      <section><h2>Theme one: TODO</h2><p>Explain the first strand of your research in accessible language. State the question, your approach, and what answering it could change.</p></section>
-      <section><h2>Theme two: TODO</h2><p>Describe a second research theme. Mention relevant methods, data, theoretical frameworks, or collaborators where useful.</p></section>
-      <section><h2>Theme three: TODO</h2><p>Describe an emerging or future direction that helps visitors understand where your research program is going.</p></section>
+      <p class="lead">Language spans levels that are often studied separately, from the dynamics of neurons and distributed brain networks to behavior and subjective experience. A mechanistic account must explain how those levels connect. Building that bridge can sharpen theories of human cognition and help guide technologies that restore communication when language or speech systems are disrupted.</p>
+
+      <section class="research-theme">
+        <p class="theme-number">01</p>
+        <h2>Online naturalistic sentence processing</h2>
+        <p>Language arrives sequentially, yet listeners and readers rapidly build interpretations from ongoing input. I study this process using real-time behavior from self-paced reading and time-resolved microelectrode array recordings during naturalistic sentence processing. My work draws on surprisal, noisy-channel inference, and continuous-time modeling to ask how linguistic features shape processing as a sentence unfolds.</p>
+        <p>This work contributes to the incremental-processing literature by linking continuously varying linguistic information to moment-by-moment behavioral and neural responses. I am especially interested in when lexical, syntactic, and semantic representations emerge, how long they persist, and how information propagates between brain regions rather than appearing only as an average response within one region.</p>
+      </section>
+
+      <section class="research-theme">
+        <p class="theme-number">02</p>
+        <h2>Mapping the language–speech interface</h2>
+        <p>My fMRI work examines how distributed language representations interface with the sensory and motor systems that support speech. In the INT project and related collaboration with Stanford’s Neural Prosthetics Translational Lab, I work with intensive deep-scan fMRI data and language–speech interface localizers to characterize this organization at the individual level.</p>
+        <p>I use representational similarity analysis to test what information multivariate activity patterns encode and generalized psychophysiological interaction analysis to examine how coupling among regions changes with task context. Together, RSA and gPPI move the question beyond where activity occurs: they ask what a neural pattern represents and how that representation is coordinated across a network. This framework can inform both basic theories of language organization and the design of speech-restoration systems.</p>
+      </section>
+
+      <section class="research-theme">
+        <p class="theme-number">03</p>
+        <h2>Experience, proficiency, and sensory grounding</h2>
+        <p>My emerging research asks how language representations change with experience. One direction examines how proficiency and bilingual language use reshape the timing, geometry, and network organization of comprehension. A second asks how vision, audition, action, and other sensory signals constrain linguistic predictions and ground meaning in the physical world.</p>
+        <p>I see these questions as closely related. Learning and using another language changes the reliability of linguistic expectations and may also change how sensory evidence is weighted. I hope to combine naturalistic tasks, cross-modal stimuli, individual-difference and longitudinal designs, and brain–model comparisons to explain how language remains flexible while preserving stable meaning across people, contexts, and modalities.</p>
+      </section>
+
+      <section class="selected-projects" id="selected-projects">
+        <p class="eyebrow">Selected work</p>
+        <h2>Projects and Analyses</h2>
+
+
+        <article class="project-entry">
+
+        <article class="project-entry">
+          <p class="project-meta">Self-paced reading · Continuous-time Deconvolutional Regression · Cross-validated decoding</p>
+          <h3>Robust sentence processing under verbatim repetition</h3>
+          <p>This project asks whether repeated exposure makes sentence-specific reading-time structure more recoverable across people. I used leave-one-participant-out multiclass decoding to distinguish stronger stimulus-driven structure from a general reduction in responses through adaptation.</p>
+          <p class="resource-links"><a href="analysis.html">View the analysis I did in this project</a><a href="presentations.html">Related talk</a></p>
+        </article>
+
+        <article class="project-entry">
+          <p class="project-meta">Deep-scan fMRI for language speech interface network · RSA · gPPI · NPTL collaboration</p>
+          <h3>Mapping language–speech interfaces</h3>
+          <p>In the INT project and related work with Stanford’s Neural Prosthetics Translational Lab, I helped intensive individual-level fMRI to examine how language representations interface with sensory and speech–motor systems. RSA characterizes representational content, while gPPI tests how network coupling changes across task phases.</p>
+          <p class="resource-links"><a href="analysis.html">View the analysis I did in this project</a></p>
+        </article>
+
+        <article class="project-entry">
+          <p class="project-meta">Intracortical microelectrode recordings · GAMs · Feature decoding · PCA · NPTL collaboration</p>
+          <h3>Neural representations and temporal dynamics at the language network</h3>
+          <p>I use intracortical microelectrode array recordings to study how neural populations encode linguistic information during naturalistic listening and reading. The question we are trying to answer is how these neural representations evolve over time and contribute to language comprehension.</p>
+          <p class="resource-links"><a href="analysis.html">View the analysis I did in this project</a></p> <p class="resource-links"><a href="presentations.html">Related poster</a></p>
+        </article>
+
+        <article class="project-entry">
+          <p class="project-meta">Sentence comprehension · Bayesian inference</p>
+          <h3>Comparative illusions and plausible alternatives</h3>
+          <p>I studied why some logically anomalous comparative sentences nevertheless feel acceptable. This work tests whether the graded strength of comparative illusions can be explained as Bayesian inference over plausible intended meanings, linking noisy-channel theory with behavioral acceptability judgments.</p>
+          <p class="resource-links"><a href="presentations.html">Related poster and talk</a></p>
+        </article>
+      </section>
+
       <section>
         <h2>Questions guiding my work</h2>
         <ol class="question-list">
-          <li><strong>TODO: Research question one?</strong> Add one or two sentences of context.</li>
-          <li><strong>TODO: Research question two?</strong> Add one or two sentences of context.</li>
-          <li><strong>TODO: Research question three?</strong> Add one or two sentences of context.</li>
+          <li><strong>How does neural activity become linguistic representations?</strong> I want to connect population-level dynamics with the representations experienced as words, sentences, and meaning.</li>
+          <li><strong>How are partial representations maintained and updated?</strong> Natural language requires the brain to preserve earlier information while continually integrating what arrives next.</li>
+          <li><strong>How does language interact with perception, motor plans, and thought?</strong> I am interested in the interfaces that connect abstract linguistic knowledge with sensory evidence, motor plans, and world knowledge.</li>
+          <li><strong>How does experience reorganize the system?</strong> Bilingualism and proficiency provide a powerful lens on which aspects of language processing are stable and which remain plastic.</li>
         </ol>
       </section>
+
       <section>
         <h2>Methods</h2>
-        <ul class="tag-list" aria-label="Research methods"><li>TODO: Method one</li><li>TODO: Method two</li><li>TODO: Method three</li><li>TODO: Method four</li></ul>
+        <ul class="tag-list" aria-label="Research methods">
+          <li>Self-paced reading</li>
+          <li>MEG and EEG</li>
+          <li>Deep-scan fMRI</li>
+          <li>RSA</li>
+          <li>gPPI</li>
+          <li>Mixed-effects models</li>
+          <li>Continuous-time regression</li>
+          <li>Neural and behavioral decoding</li>
+        </ul>
       </section>
     </main>
   </body>

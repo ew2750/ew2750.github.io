@@ -1,4 +1,4 @@
-# Academic Website Template
+# ErxiaoWang personal website
 
 A lightweight, responsive academic portfolio for GitHub Pages. It is based on the page structure of [Douglas Zhou's website](https://douglaszhou28.github.io/) and has been rewritten as a neutral template with placeholder content.
 

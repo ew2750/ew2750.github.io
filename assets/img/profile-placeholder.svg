@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
   <title id="title">Profile photo placeholder</title><desc id="desc">Replace this image with your professional portrait.</desc>
-  <rect width="800" height="1000" fill="#e8f2f4"/><circle cx="400" cy="360" r="145" fill="#a8c8cf"/><path d="M135 865c20-190 125-286 265-286s245 96 265 286" fill="#a8c8cf"/>
-  <text x="400" y="930" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#0d4c62">ADD YOUR PORTRAIT</text>
+  <rect width="800" height="1000" fill="#f4eadf"/><circle cx="400" cy="360" r="145" fill="#d4b99c"/><path d="M135 865c20-190 125-286 265-286s245 96 265 286" fill="#d4b99c"/>
+  <text x="400" y="930" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" fill="#583821">ADD YOUR PORTRAIT</text>
 </svg>

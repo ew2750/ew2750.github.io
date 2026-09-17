@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Question-driven analyses using CDR, GAMs, PCA, decoding, gPPI, and RSA by Erxiao Wang.">
+    <title>Analysis | ErxiaoWang personal website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="index.html">ERXIAO WANG</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a class="active" aria-current="page" href="analysis.html">Analysis</a>
+        <a href="presentations.html">Publications &amp; Talks</a>
+        <a href="cv.html">CV</a>
+        <a href="about.html">About</a>
+        <a href="misc.html">Misc</a>
+      </nav>
+    </header>
+    <main class="page analysis-page">
+      <p class="eyebrow">Methods in practice</p>
+      <h1>Analysis</h1>
+      <p class="lead">Neural and behavioral data aren’t always clean, and they never are. I enjoy exploring different ways of analysis that can turn noisy data into robust scientific results.</p>
+      <nav class="analysis-method-nav" aria-label="Analysis methods">
+        <a href="#cdr">CDR</a><a href="#gam">GAM</a><a href="#pca">PCA</a><a href="#decoding">Decoding</a><a href="#gppi">gPPI</a><a href="#rsa">RSA</a>
+      </nav>
+
+      <article class="analysis-entry" id="cdr">
+        <div class="analysis-heading">
+          <div><p class="analysis-kicker">Continuous-time deconvolutional regression</p><h2>CDR</h2></div>
+        </div>
+        <div class="analysis-summary method-summary">
+          <section><h3>Guiding question</h3><p>How do linguistic features influence responses over time when successive words arrive at irregular intervals?</p></section>
+          <section><h3>Why this analysis?</h3><p>CDR estimates the delayed and overlapping effects of timestamped predictors. It is useful for naturalistic language because a word’s influence can persist beyond its onset, rather than fitting neatly into fixed time bins.</p></section>
+        </div>
+        <figure class="analysis-figure">
+          <a href="assets/analysis/cdr-reading-timecourses.png" aria-label="View the full-size CDR figure"><img src="assets/analysis/cdr-reading-timecourses.png" alt="CDRNN impulse-response curves for GPT-2 surprisal, event rate, repetition index, unigram surprisal, and word length" loading="lazy"></a>
+          <figcaption>Example CDRNN impulse-response estimates for self-paced reading time, showing how predictor effects evolve after an event. Shaded bands show model-estimated uncertainty for this saved fit; they are not a direct test of differences between repetition conditions.</figcaption>
+        </figure>
+        <p class="resource-links"><a href="https://aclanthology.org/D18-1288/">Method reference</a></p>
+      </article>
+
+      <article class="analysis-entry" id="gam">
+        <div class="analysis-heading">
+          <div><p class="analysis-kicker">Generalized additive models</p><h2>GAM</h2></div>
+        </div>
+        <div class="analysis-summary method-summary">
+          <section><h3>Guiding question</h3><p>When do neural responses diverge across linguistic features, conditions, or recorded brain regions?</p></section>
+          <section><h3>Why this analysis?</h3><p>GAMs model smooth, potentially nonlinear relationships without imposing a straight-line effect or a fixed response shape. They help characterize how intracortical activity varies over time and across task variables.</p></section>
+        </div>
+        <figure class="analysis-figure">
+          <a href="assets/analysis/gam-frontal-timecourses.png" aria-label="View the full-size GAM figure"><img src="assets/analysis/gam-frontal-timecourses.png" alt="Median GAM impulse responses comparing area 55b and IFG during reading and listening" loading="lazy"></a>
+          <figcaption>GAM-derived impulse responses for contextual surprisal, unigram surprisal, and sentence endings in area 55b and IFG, separately for reading and listening. Shaded bands span the 25th–75th percentiles across channels, not confidence intervals across participants.</figcaption>
+        </figure>
+      </article>
+
+      <article class="analysis-entry" id="pca">
+        <div class="analysis-heading">
+          <div><p class="analysis-kicker">Principal component analysis</p><h2>PCA</h2></div>
+        </div>
+        <div class="analysis-summary method-summary">
+          <section><h3>Guiding question</h3><p>What dominant patterns organize the activity of many recorded neurons, and how do population states evolve during comprehension or speech planning?</p></section>
+          <section><h3>Why this analysis?</h3><p>PCA summarizes correlated activity in a smaller set of components, making high-dimensional population dynamics easier to visualize. It is an exploratory description of variance, not by itself evidence that a component encodes a particular linguistic feature.</p></section>
+        </div>
+        <figure class="analysis-figure">
+          <a href="assets/analysis/pca-linguistic-trajectories.png" aria-label="View the full-size PCA figure"><img src="assets/analysis/pca-linguistic-trajectories.png" alt="PC1 and PC2 trajectories for zero and positive DLT integration cost across six intracortical arrays" loading="lazy"></a>
+          <figcaption>Listening population trajectories for words with zero versus positive dependency-locality integration cost, from −500 to +1000 ms relative to word onset. Each array uses a shared PCA basis across groups and times. These descriptive trajectories do not by themselves establish held-out generalization or feature-specific encoding.</figcaption>
+        </figure>
+      </article>
+
+      <article class="analysis-entry" id="decoding">
+        <div class="analysis-heading">
+          <div><p class="analysis-kicker">Recoverable information in behavioral and neural patterns</p><h2>Decoding</h2></div>
+        </div>
+        <div class="analysis-summary method-summary">
+          <section><h3>Guiding question</h3><p>Can sentence identity, linguistic features, or task states be predicted from held-out behavioral or neural data?</p></section>
+          <section><h3>Why this analysis?</h3><p>Cross-validated decoding tests whether information is recoverable beyond the training sample. For sentence repetition, it helps distinguish increased sentence-specific structure from a general change in response magnitude; for neural recordings, it tests which features population activity can predict.</p></section>
+        </div>
+        <figure class="analysis-figure">
+          <a href="assets/analysis/decoding-surprisal.png" aria-label="View the full-size Decoding figure"><img src="assets/analysis/decoding-surprisal.png" alt="Held-out prediction correlations for a GPT-based linguistic feature across six intracortical arrays" loading="lazy"></a>
+          <figcaption>Neural decoding of the GPT-based predictor during reading, using an approximately 250–750 ms post-onset window and cross-validation grouped by story. Bars show prediction–target Pearson correlations; error bars are 95% prediction-bootstrap intervals. This is one exploratory window, not a corrected comparison across arrays or time windows.</figcaption>
+        </figure>
+      </article>
+
+      <article class="analysis-entry" id="gppi">
+        <div class="analysis-heading">
+          <div><p class="analysis-kicker">Generalized psychophysiological interactions</p><h2>gPPI</h2></div>
+        </div>
+        <div class="analysis-summary method-summary">
+          <section><h3>Guiding question</h3><p>Does coupling between language and speech–motor regions change as a sequence is cued, maintained, and executed?</p></section>
+          <section><h3>Why this analysis?</h3><p>gPPI models how the relationship between a seed region and other regions varies with task context, beyond their overall activity levels. It addresses condition-dependent functional coupling, not the direction of information flow or a causal connection.</p></section>
+        </div>
+        <figure class="analysis-figure">
+          <a href="assets/analysis/gppi-phase-matrices.png" aria-label="View the full-size gPPI figure"><img src="assets/analysis/gppi-phase-matrices.png" alt="Seed-to-target gPPI statistic matrices comparing Cue, Delay, and Go phases in an overt sequence task" loading="lazy"></a>
+          <figcaption>Participant-level seed-to-target coupling summaries for an overt sequence task, including signed phase differences, magnitude differences, and total phase coupling. Colors show fixed-effects t statistics or approximate Wald statistics, as labeled. These matrices do not establish causal direction, corrected significance, or population-level effects.</figcaption>
+        </figure>
+        <p class="resource-links"><a href="assets/analysis/gppi-summary.jpg">Existing gPPI summary figure</a><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3376181/">Method reference</a></p>
+      </article>
+
+      <article class="analysis-entry" id="rsa">
+        <div class="analysis-heading">
+          <div><p class="analysis-kicker">Representational similarity analysis</p><h2>RSA</h2></div>
+        </div>
+        <div class="analysis-summary method-summary">
+          <section><h3>Guiding question</h3><p>Do differences among neural patterns reflect sequence identity, modality, task phase, or linguistic structure?</p></section>
+          <section><h3>Why this analysis?</h3><p>RSA compares the geometry of response patterns with predictions from task variables or computational models. It tests how conditions are organized relative to one another, rather than relying only on average activation or a single decoding score.</p></section>
+        </div>
+        <figure class="analysis-figure">
+          <a href="assets/analysis/rsa-neural-distances.png" aria-label="View the full-size RSA figure"><img src="assets/analysis/rsa-neural-distances.png" alt="Pairwise neural-distance matrix across content and jabberwocky sentence conditions" loading="lazy"></a>
+          <figcaption>A cross-validated neural-distance matrix across content and jabberwocky sentence conditions, pooling the recorded channels. Distances are normalized by the square root of channel count. This illustrates the neural geometry used as input to RSA; it is not a completed comparison with a theoretical or computational model.</figcaption>
+        </figure>
+        <p class="resource-links"><a href="https://doi.org/10.3389/neuro.06.004.2008">Method reference</a></p>
+      </article>
+    </main>
+  </body>
+</html>
