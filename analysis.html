@@ -34,27 +34,27 @@
           <div><p class="analysis-kicker">Continuous-time deconvolutional regression</p><h2>CDR</h2></div>
         </div>
         <div class="analysis-summary method-summary">
-          <section><h3>Guiding question</h3><p>How do linguistic features influence responses over time when successive words arrive at irregular intervals?</p></section>
-          <section><h3>Why this analysis?</h3><p>CDR estimates the delayed and overlapping effects of timestamped predictors. It is useful for naturalistic language because a word’s influence can persist beyond its onset, rather than fitting neatly into fixed time bins.</p></section>
+          <section><h3>How do linguistic features influence responses over time when successive words arrive at irregular intervals?</h3><p></p></section>
+          <section><p>CDR estimates the delayed and overlapping effects (an impulse response function) of timestamped stimuli-driven predictors. It is useful for naturalistic language because a word’s influence can persist beyond its offset.</p></section>
         </div>
         <figure class="analysis-figure">
-          <a href="assets/analysis/cdr-reading-timecourses.png" aria-label="View the full-size CDR figure"><img src="assets/analysis/cdr-reading-timecourses.png" alt="CDRNN impulse-response curves for GPT-2 surprisal, event rate, repetition index, unigram surprisal, and word length" loading="lazy"></a>
-          <figcaption>Example CDRNN impulse-response estimates for self-paced reading time, showing how predictor effects evolve after an event. Shaded bands show model-estimated uncertainty for this saved fit; they are not a direct test of differences between repetition conditions.</figcaption>
+          <a href="assets/analysis/cdr-gpt2-surprisal.png" aria-label="View the full-size CDR figure"><img src="assets/analysis/cdr-gpt2-surprisal.png" alt="Estimated GPT-2 surprisal effects on reading time over a one-second delay, with colored impulse-response curves" loading="lazy"></a>
+          <figcaption>CDRNN estimates of the effect of GPT-2 surprisal on self-paced reading time across repetition conditions, plotted as reading-time change in milliseconds against delay from word onset.</figcaption>
         </figure>
-        <p class="resource-links"><a href="https://aclanthology.org/D18-1288/">Method reference</a></p>
+        <p class="resource-links"><a href="https://aclanthology.org/D18-1288/">Method reference: Shain et al., 2018</a></p>
       </article>
 
       <article class="analysis-entry" id="gam">
         <div class="analysis-heading">
-          <div><p class="analysis-kicker">Generalized additive models</p><h2>GAM</h2></div>
+          <div><p class="analysis-kicker">Generalized additive models</p><h2>CDR-GAM</h2></div>
         </div>
         <div class="analysis-summary method-summary">
-          <section><h3>Guiding question</h3><p>When do neural responses diverge across linguistic features, conditions, or recorded brain regions?</p></section>
-          <section><h3>Why this analysis?</h3><p>GAMs model smooth, potentially nonlinear relationships without imposing a straight-line effect or a fixed response shape. They help characterize how intracortical activity varies over time and across task variables.</p></section>
+          <section><h3>A CDR-GAM approach extends CDR by using smooth curves to estimate how predictors relate to neural responses, sharing CDR’s goal of estimating predictor effects in continuous-time events.</h3></section>
+          <section><p></p></section>
         </div>
         <figure class="analysis-figure">
-          <a href="assets/analysis/gam-frontal-timecourses.png" aria-label="View the full-size GAM figure"><img src="assets/analysis/gam-frontal-timecourses.png" alt="Median GAM impulse responses comparing area 55b and IFG during reading and listening" loading="lazy"></a>
-          <figcaption>GAM-derived impulse responses for contextual surprisal, unigram surprisal, and sentence endings in area 55b and IFG, separately for reading and listening. Shaded bands span the 25th–75th percentiles across channels, not confidence intervals across participants.</figcaption>
+          <a href="assets/analysis/gam-reading-gpt-irfs.png" aria-label="View the full-size GAM figure"><img src="assets/analysis/gam-reading-gpt-irfs.png" alt="GAM impulse-response estimates for a GPT-based predictor during reading, plotted across six intracortical arrays over a two-second delay" loading="lazy"></a>
+          <figcaption>CDR-GAM-derived impulse-response estimates for a GPT-based predictor relavent to word onset during naturalistic reading, shown separately for six intracortical arrays. </figcaption>
         </figure>
       </article>
 
@@ -67,8 +67,8 @@
           <section><h3>Why this analysis?</h3><p>PCA summarizes correlated activity in a smaller set of components, making high-dimensional population dynamics easier to visualize. It is an exploratory description of variance, not by itself evidence that a component encodes a particular linguistic feature.</p></section>
         </div>
         <figure class="analysis-figure">
-          <a href="assets/analysis/pca-linguistic-trajectories.png" aria-label="View the full-size PCA figure"><img src="assets/analysis/pca-linguistic-trajectories.png" alt="PC1 and PC2 trajectories for zero and positive DLT integration cost across six intracortical arrays" loading="lazy"></a>
-          <figcaption>Listening population trajectories for words with zero versus positive dependency-locality integration cost, from −500 to +1000 ms relative to word onset. Each array uses a shared PCA basis across groups and times. These descriptive trajectories do not by themselves establish held-out generalization or feature-specific encoding.</figcaption>
+          <a href="assets/analysis/pca-population-summary.png" aria-label="View the full-size PCA figure"><img src="assets/analysis/pca-population-summary.png" alt="PCA summary across six intracortical arrays showing PC1–PC2 trajectories, component scores over time, and channel contributions" loading="lazy"></a>
+          <figcaption>Population dynamics across six intracortical arrays: PC1–PC2 trajectories, component scores relative to word onset, and channel contributions to each component. Percentages indicate explained variance. These exploratory summaries do not by themselves establish feature-specific encoding.</figcaption>
         </figure>
       </article>
 
