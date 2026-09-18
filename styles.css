@@ -105,7 +105,7 @@ figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; font-style:
 .analysis-summary h3 { margin: 0 0 8px; color: var(--accent-dark); font-size: 18px; }
 .analysis-summary p { color: var(--text-secondary); font-size: 15px; line-height: 1.65; }
 .analysis-figure { margin: 32px 0 22px; }
-.analysis-figure img { display: block; width: 100%; height: auto; background: #000; border: 1px solid #493a2c; box-shadow: var(--shadow); }
+.analysis-figure img { display: block; width: 75%; height: auto; margin-inline: auto; background: #000; border: 1px solid #493a2c; box-shadow: var(--shadow); }
 .analysis-figure figcaption { max-width: 940px; margin-top: 12px; text-align: left; }
 .interpretation-note { max-width: 940px; color: var(--muted); font-size: 14px; }
 .developing-entry > p { max-width: var(--text-width); }
