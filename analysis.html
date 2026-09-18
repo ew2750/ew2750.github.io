@@ -68,22 +68,23 @@
         </div>
         <figure class="analysis-figure">
           <a href="assets/analysis/pca-population-summary.png" aria-label="View the full-size PCA figure"><img src="assets/analysis/pca-population-summary.png" alt="PCA summary across six intracortical arrays showing PC1–PC2 trajectories, component scores over time, and channel contributions" loading="lazy"></a>
-          <figcaption>Population dynamics across six intracortical arrays: PC1–PC2 trajectories, component scores relative to word onset, and channel contributions to each component. Percentages indicate explained variance.</figcaption>
+          <figcaption>Population dynamics across six intracortical arrays: PC1–PC2 temporal trajectories relevant to the start and end of the word, and channel contributions to each component. Percentages indicate explained variance.</figcaption>
         </figure>
         <p class="resource-links"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6122849/">Method reference: Gallego et al. 2017 </a></p>
       </article>
 
       <article class="analysis-entry" id="decoding">
         <div class="analysis-heading">
-          <div><p class="analysis-kicker">Recoverable information in behavioral and neural patterns</p><h2>Decoding</h2></div>
+          <div><p class="analysis-kicker">Recoverable information in neural patterns</p><h2>Decoding</h2></div>
         </div>
         <div class="analysis-summary method-summary">
-          <section><h3>Guiding question</h3><p>Can sentence identity, linguistic features, or task states be predicted from held-out behavioral or neural data?</p></section>
-          <section><h3>Why this analysis?</h3><p>Cross-validated decoding tests whether information is recoverable beyond the training sample. For sentence repetition, it helps distinguish increased sentence-specific structure from a general change in response magnitude; for neural recordings, it tests which features population activity can predict.</p></section>
+          <section><h3>How much stimuli-related features can be predicted from held-out neural data over time at different time windows?</h3><p></p></section>
+          <section><p>Cross-validated regression model is used to predict held-out neural data from stimuli-related features over different time window across the word, which quantifies how well neural activity encodes specific linguistic features at various points in time.</p></section>
         </div>
+
         <figure class="analysis-figure">
-          <a href="assets/analysis/decoding-surprisal.png" aria-label="View the full-size Decoding figure"><img src="assets/analysis/decoding-surprisal.png" alt="Held-out prediction correlations for a GPT-based linguistic feature across six intracortical arrays" loading="lazy"></a>
-          <figcaption>Neural decoding of the GPT-based predictor during reading, using an approximately 250–750 ms post-onset window and cross-validation grouped by story. Bars show prediction–target Pearson correlations; error bars are 95% prediction-bootstrap intervals. This is one exploratory window, not a corrected comparison across arrays or time windows.</figcaption>
+          <a href="assets/analysis/decoding-residual-timecourses.png" aria-label="View the full-size decoding time-course figure"><img src="assets/analysis/decoding-residual-timecourses.png" alt="Decoding time courses for GPT residual surprisal, GPT probability, and unigram residual surprisal across six intracortical arrays during reading and listening" loading="lazy"></a>
+          <figcaption>Example shows decoding scores across six intracortical arrays in running 500-ms windows. Rows show GPT residual surprisal, GPT probability, and unigram residual surprisal. Score is measured as the Pearson correlation between predicted and actual neural responses within each window.</figcaption>
         </figure>
       </article>
 
@@ -92,8 +93,8 @@
           <div><p class="analysis-kicker">Generalized psychophysiological interactions</p><h2>gPPI</h2></div>
         </div>
         <div class="analysis-summary method-summary">
-          <section><h3>Guiding question</h3><p>Does coupling between language and speech–motor regions change as a sequence is cued, maintained, and executed?</p></section>
-          <section><h3>Why this analysis?</h3><p>gPPI models how the relationship between a seed region and other regions varies with task context, beyond their overall activity levels. It addresses condition-dependent functional coupling, not the direction of information flow or a causal connection.</p></section>
+          <section><h3>How does coupling with language and speech–motor regions change as a function of different tasks?</h3><p></p></section>
+          <section><p>gPPI models how the relationship between a seed region and other regions (target regions) varies with task context, beyond their intrinsic connectivity based on GLM estimation.</p></section>
         </div>
         <figure class="analysis-figure">
           <a href="assets/analysis/gppi-phase-matrices.png" aria-label="View the full-size gPPI figure"><img src="assets/analysis/gppi-phase-matrices.png" alt="Seed-to-target gPPI statistic matrices comparing Cue, Delay, and Go phases in an overt sequence task" loading="lazy"></a>
